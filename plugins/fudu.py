@@ -9,6 +9,7 @@
 from plugins import BasePlugin
 
 class PastePlugin(BasePlugin):
+    cont=""
     def is_match(self, from_uin, content, type):
         if type=='g':
             if self.cont==content:
@@ -22,4 +23,4 @@ class PastePlugin(BasePlugin):
         self.cont=""
 
     def handle_message(self, callback):
-        self.send(cont, callback)
+        self.send(self.cont, callback)
