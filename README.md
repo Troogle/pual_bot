@@ -6,15 +6,20 @@ pual_bot 是基于[twqq](https://github.com/coldnight/twqq)的高效的支持并
 
 # 安装配置
 程序依赖 可使用 easy_install 安装
+## 必装依赖
 ```bash
-easy_install twqq http-parser regex
+easy_install twqq
 ```
-
+## 可选依赖
+```bash
+easy_install http-parser regex requests pyxmpp2
+```
 有些插件依赖于 bs4, 所以可以通过 apt 安装
 ```bash
 sudo apt-get install python-bs4
 ```
 
+## 初始化配置文件
 将`config.py.example`重命名为 `config.py`, 填入QQ号码和密码配置, 执行webqq.py脚本. 
 
 ```bash
@@ -22,6 +27,11 @@ sudo apt-get install python-bs4
 ```
 
 # 最近更新
+## 2014-06-25
+* 插件优先级机制
+* 更新添加插件
+* 更新 Simsimi 接口
+
 ## 2014-03-05
 * 增加讨论组支持
 
